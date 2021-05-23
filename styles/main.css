@@ -1,0 +1,279 @@
+@font-face {
+    font-family: Shentox;
+    src: url("../fonts/Shentox\ Medium.ttf");
+}
+
+@font-face {
+    font-family: Graphik;
+    src: url("../fonts/Graphik-Regular.ttf");
+}
+
+/* NAVBAR */
+
+body {
+    font-family: Graphik;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f7f8f8;
+    box-shadow: 0px 0px 20px rgb(214, 214, 214);
+    padding: 0 8px;
+    z-index: 10;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav div * {
+    padding: 16px;
+}
+
+nav .logo svg path {
+    fill: black;
+    transition: fill .25s ease;
+}
+
+nav .logo svg path:hover {
+    fill: #c6009a;
+}
+
+.links a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: "Shentox", sans-serif;
+    color: #505666;
+    letter-spacing: 0.08em;
+    font-size: .875rem;
+}
+
+.links a:hover {
+    color: black;
+    background-color: white;
+}
+
+.down-arrow {
+    height: 12px;
+    width: 12px;
+    padding: 0;
+    padding-left: 6px;
+}
+
+/* HEADER */
+
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 7em 1.5em 3.75em 1.5em;
+}
+
+header .intro {
+    color: #505666;
+    font-size: 2rem;
+}
+
+.showcase-articles {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 3em;
+    gap: 1em;
+}
+
+.showcase-articles img {
+    width: 100%;
+}
+
+.showcase-articles article {
+    position: relative;
+}
+
+.articles1 {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.articles2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.subarticles {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.article-title {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    color: #505666;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    -webkit-text-stroke: 1px rgb(177, 177, 177);
+}
+
+.article-title-centered {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+#learnmore {
+    margin: 0 auto;
+    border-radius: 25px;
+    padding: 12px 16px;
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+}
+
+/* POPULAR ARTICLES */
+
+.popular-articles {
+    background-color: #f7f8f8;
+    text-align: center;
+}
+
+.popular-articles .title {
+    color: #a7aab2;
+    font-weight: bold;
+    padding-top: 1em;
+    font-size: 25px;
+    margin-bottom: 4em;
+}
+
+.popular-articles .articles {
+    display: flex;
+    flex-direction: column;
+}
+
+.popular-article {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1.25em;
+}
+
+.large-number {
+    font-size: 25pt;
+    color: #c09;
+    margin-right: .35em;
+}
+
+.pop-art-title {
+    font-size: 12pt;
+    text-align: left;
+    font-weight: bolder;
+}
+
+.latest-stories h1 {
+    padding: 4em 0;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.stories {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.story {
+    display: flex;
+    flex-direction: column;
+    padding: .5em 0;
+}
+
+.story h2 {
+    padding-top: 12px;
+    font-weight: bold;
+}
+
+.story h3 {
+    padding-top: 8px;
+}
+
+
+
+.text-muted {
+    color: #a0a0a0;
+}
+
+/* QUERIES */
+
+@media (max-width: 1024px) {
+    nav .links {
+        display: none;
+    }
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 3.75em;
+    }
+    header .logo {
+        width: 50%;
+    }
+    header .intro {
+        padding-top: .25em;
+        font-size: 14pt;
+    }
+    .showcase-articles {
+        flex-direction: column;
+    }
+    .subarticles {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 576px) {
+    .story {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .story {
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    header .logo {
+        width: 80%;
+    }
+    .logo-wrapper {
+        max-width: 25%;
+        height: auto;
+        margin: 0 0 0 5%;
+        padding: 1em 0;
+    }
+    .popular-articles .articles {
+        flex-direction: row;
+        padding-bottom: 4em;
+    }
+    .popular-article {
+        margin: 0 2em;
+    }
+    .story {
+        max-width: 25%;
+    }
+}
+
